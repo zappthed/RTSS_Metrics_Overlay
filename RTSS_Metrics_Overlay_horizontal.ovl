@@ -12,7 +12,7 @@ EmbeddedImage=
 PingAddr=
 [General]
 Sources=25
-Tables=2
+Tables=1
 Layers=1
 [Source0]
 Name=CPU usage
@@ -190,14 +190,6 @@ Formula=
 Provider=PresentMon
 ID=PresentMode
 [Table0]
-Name=GPU Info
-ValueAlignment=0
-UnitsAlignment=0
-Lines=1
-Line0Name=GPU Info
-Line0Cells=1
-Line0Cell0Text=%GPU% %Driver%
-[Table1]
 Name=PC
 ValueAlignment=-5
 UnitsAlignment=-3
@@ -255,7 +247,7 @@ Line7Cell1Text=\n<G=Frametime,0,-1,1,0,100,80>
 Line7Cell2Text=\n<SWITCH PresentMode><CASE 0><C=008000>Hardware: legacy flip<C><CASE 1><C=008000>Hardware: legacy copy<C><CASE 2><C=008000>Hardware: independent flip<C><CASE 3><C=FF0000>Composed: flip<C><CASE 4><C=00FF00>Hardware composed: independent flip<C><CASE 5><C=800000>Composed: GPU copy<C><CASE 6><C=800000>Composed: CPU copy<C><CASE>
 [Layer0]
 Name=
-Text=<S=50><TT=GPU Info><S>\n<TT=PC>
+Text=<S=50>%Driver%<S>\n<TT=PC>
 PositionSticky=0
 ExtentX=0
 ExtentY=0

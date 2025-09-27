@@ -267,7 +267,7 @@ Line18Cell1Text=\r\n<G=Frametime,0,-2,1,0,100,80>
 Line18Cell2Text=\r\n<SWITCH PresentMode><CASE 0><C=008000>Hardware: legacy flip<C><CASE 1><C=008000>Hardware: legacy copy<C><CASE 2><C=008000>Hardware: independent flip<C><CASE 3><C=FF0000>Composed: flip<C><CASE 4><C=00FF00>Hardware composed: independent flip<C><CASE 5><C=800000>Composed: GPU copy<C><CASE 6><C=800000>Composed: CPU copy<C><CASE>
 [Layer0]
 Name=
-Text=<S=50>%Driver%<S>\r\n<TT=PC>
+Text=<S=50>%Driver%<S>\n<TT=PC>
 PositionSticky=0
 ExtentX=0
 ExtentY=0
