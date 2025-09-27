@@ -21,7 +21,7 @@ The overlay uses joint data from RTSS and PresentMon built-in plugin that build 
 
 ## Presentation Model
 
-I have yet to explain the depths, maybe in the future.
+Explanations in the future.
 
   <img src="https://github.com/zappthed/RTSS_Metrics_Overlay/blob/main/Preview/presentation_model_d3d11-12_flip.png" style="max-height: 800px; width: auto;">
   
