@@ -21,7 +21,17 @@ The overlay uses joint data from RTSS and PresentMon built-in plugin that build 
 
 ## Presentation Model
 
-Explanations in the future.
+### Flip (D3D11/12*)
+For a game using a Flip swap effect, there are various factors that determine which presentation model will be used:
+
+- The requested display mode of the game.
+    - (*) The Exclusive Fullscreen (FSE) section is not applicable to DirectX 12 games as its “exclusive mode” is merely an “emulated” mode where the Windows desktop temporarily changes resolution, refresh rate, and colorspace to the one requested by the game, but otherwise acts exactly like a regular borderless fullscreen window.
+- Fullscreen Optimizations (FSO) toggle (only relevant for games running in Exclusive Fullscreen (FSE) mode).
+- Whether Multi-Plane Overlay (MPO) are available on the hardware.
+- And finally whether the swapchain and system fulfills the necessary requirements to engage a DirectFlip optimization:
+    - DirectFlip: Your swapchain buffers match the screen dimensions, and your window client region covers the screen. Instead of using the DWM swapchain to display on the screen, the application swapchain is used.
+    - DirectFlip with panel fitters (requires MPO): Your window client region covers the screen, and your swapchain buffers are within some hardware-dependent scaling factor (for example, 0.25x to 4x) of the screen. The GPU scanout hardware is used to scale your buffer while sending it to the display.
+    - DirectFlip with multi-plane overlay (requires MPO): Your swapchain buffers are within some hardware-dependent scaling factor of your window dimensions. The DWM is able to reserve a dedicated hardware scanout plane for your application, which is then scanned out and potentially stretched to an alpha-blended sub-region of the screen.
 
   <img src="https://github.com/zappthed/RTSS_Metrics_Overlay/blob/main/Preview/presentation_model_d3d11-12_flip.png" style="max-height: 800px; width: auto;">
   
