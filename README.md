@@ -14,9 +14,9 @@ The overlay uses joint data from RTSS and PresentMon built-in plugin that build 
 | FPS (API) | Average, 1% Low, 0.1% Low, Frametime |
 | Presentation Model | Hardware (Composed): Independent/Legacy flip; Composed: Copy |
 
-*Horizontal
+*Compact
   <img src="https://github.com/zappthed/RTSS_Metrics_Overlay/blob/6d17b517d65a7b4c57d4d1abdc78382c6a197555/Preview/RTSS_Metrics_Overlay_horizontal_preview.png" style="max-height: 800px; width: auto;">
-*Vertical
+*Detailed
   <img src="https://github.com/zappthed/RTSS_Metrics_Overlay/blob/6d17b517d65a7b4c57d4d1abdc78382c6a197555/Preview/RTSS_Metrics_Overlay_vertical_preview.png" style="max-height: 800px; width: auto;">
 
 ## Presentation Model
