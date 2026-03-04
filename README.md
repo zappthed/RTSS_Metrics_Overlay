@@ -11,7 +11,7 @@ The overlay uses joint data from RTSS and PresentMon built-in plugin that build 
 | RAM (Total RAM) | Usage(GB) |
 | GPU Name | Usage(%), Clock(MHz), Temp°, Power(W) |
 | VRAM (Total VRAM) | Usage(GB), Clock(MHz), Temp° |
-| FPS (API) | Average, 1% Low, 0.1% Low, Frametime |
+| FPS (API) | Current, Average, 1% Low, 0.1% Low, Frametime(Graph) |
 | Presentation Model | Hardware (Composed): Independent/Legacy flip; Composed: Copy |
 
 *Compact
