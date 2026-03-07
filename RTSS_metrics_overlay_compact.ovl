@@ -12,7 +12,7 @@ LockUserSettings=0
 EmbeddedImage=
 PingAddr=
 [General]
-Sources=25
+Sources=26
 Tables=1
 Layers=1
 [Source0]
@@ -149,41 +149,48 @@ Formula=
 Provider=HAL
 ID=GPU1 memory temperature
 [Source19]
+Name=FramerateCURRENT
+Units=FPS
+Format=
+Formula=1000/Frametime
+Provider=HAL
+ID=FramerateCURRENT
+[Source20]
+Name=FramerateAVG
+Units=AVG
+Format=
+Formula=1000/percentile(Frametime,50)
+Provider=HAL
+ID=FramerateAVG
+[Source21]
+Name=Framerate1Low
+Units=1%
+Format=
+Formula=1000/percentile(Frametime,99)
+Provider=HAL
+ID=Framerate1Low
+[Source22]
+Name=Framerate0.1Low
+Units=0.1%
+Format=
+Formula=1000/percentile(Frametime,99.9)
+Provider=HAL
+ID=Framerate0.1Low
+[Source23]
 Name=IsGpuLimited
 Units=
 Format=
 Formula=(msGpuActive / msBetweenPresents) >= 0.75
 Provider=HAL
 ID=Stub
-[Source20]
-Name=FrameratePresented1Dot0PLow
-Units=1%
-Format=
-Formula=1000/percentile(msBetweenPresents,99)
-Provider=HAL
-ID=Stub
-[Source21]
-Name=FrameratePresented0Dot1PLow
-Units=0.1%
-Format=
-Formula=1000/percentile(msBetweenPresents,99.9)
-Provider=HAL
-ID=Stub
-[Source22]
-Name=msBetweenPresents
-Units=ms
-Format=
-Formula=
-Provider=PresentMon
-ID=msBetweenPresents
-[Source23]
+[Source24]
 Name=msGpuActive
 Units=ms
 Format=
 Formula=
 Provider=PresentMon
 ID=msGpuActive
-[Source24]
+[Source25]
 Name=PresentMode
 Units=
 Format=
@@ -192,6 +199,7 @@ Provider=PresentMon
 ID=PresentMode
 [Table0]
 Name=PC
+ValueAlignment=-5
 Lines=6
 Line0Name=%CPU%
 Line0Cells=4
@@ -210,7 +218,7 @@ Line2Cells=4
 Line2Cell0Source=GPU1 usage
 Line2Cell0Color=FF0000,98,(GPU1 usage,0)
 Line2Cell1Source=GPU1 clock
-Line2Cell1Color=FF0000,2700,(GPU1 clock,0)
+Line2Cell1Color=FFFFFF
 Line2Cell2Source=GPU1 temperature
 Line2Cell2Color=FFFFFF,,80,FF0000,90,(GPU1 temperature,0)
 Line2Cell3Source=GPU1 power
@@ -225,16 +233,19 @@ Line3Cell2Color=FFFFFF,,80,FF0000,90,(GPU1 memory temperature,0)
 Line4Name=<APP><ARCH>
 Line4Cells=4
 Line4Cell0Source=Framerate
-Line4Cell0Color=FF0000,,60,FFFFFF,60,(Framerate,0)
-Line4Cell1Source=Framerate Avg
-Line4Cell2Source=Framerate 1% Low
-Line4Cell2Color=FF0000,,60,FFFFFF,60,(Framerate 1% Low,0)
-Line4Cell3Source=Framerate 0.1% Low
-Line4Cell3Color=FF0000,,60,FFFFFF,60,(Framerate 0.1% Low,0)
-Line5Name=<FT><S=50>ms<S>
-Line5Cells=2
-Line5Cell0Text=\n<G=Frametime,0,-1,1,0,100,80>
-Line5Cell1Text=\n<SWITCH PresentMode><CASE 0><C=00FF00>HW: legacy flip<CASE 1><C=00FF00>HW: legacy copy<CASE 2><C=FF0000>Composed: flip<CASE 3><C=00FF00>HW: independent flip<CASE 4><C=00FF00>HW composed: iflip<C><CASE 5><C=FF0000>Composed: GPU copy<C><CASE 6><C=FF0000>Composed: CPU copy<C><CASE>
+Line4Cell0Color=FF0000,,59,FFFFFF,60,(Framerate,0)
+Line4Cell1Source=FramerateAVG
+Line4Cell1Color=FF0000,,59,FFFFFF,60,(FramerateAVG,0)
+Line4Cell2Source=Framerate1Low
+Line4Cell2Color=FF0000,,60,FFFFFF,60,(Framerate1Low,0)
+Line4Cell3Source=Framerate0.1Low
+Line4Cell3Color=FF0000,,60,FFFFFF,60,(Framerate0.1Low,0)
+Line5Name=Frametime
+Line5Cells=3
+Line5Cell0Source=Frametime
+Line5Cell0Color=FFFFFF,,16.5,FF0000,16.6,(Frametime,0)
+Line5Cell1Text=\n<G=Frametime,0,-1,1,0,100,80>
+Line5Cell2Text=\n<SWITCH PresentMode><CASE 0><C=00FF00>HW: legacy flip<CASE 1><C=00FF00>HW: legacy copy<CASE 2><C=FF0000>Composed: flip<CASE 3><C=00FF00>HW: independent flip<CASE 4><C=00FF00>HW composed: iflip<C><CASE 5><C=FF0000>Composed: GPU copy<C><CASE 6><C=FF0000>Composed: CPU copy<C><CASE>
 [Layer0]
 Name=RTSS_Metrics_Overlay_horizontal
 Text=<S=50>%Driver%<S>\n<TT=PC>
