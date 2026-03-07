@@ -271,15 +271,15 @@ Line17Cell0Color=FF0000,,59,FFFFFF,60,(Framerate0.1Low,0)
 Line18Name=Frametime
 Line18Cells=3
 Line18Cell0Source=Frametime
-Line18Cell0Color=FFFFFF,,16.65,F0F0F0,16.66,(Frametime,0)
+Line18Cell0Color=FFFFFF,,16.65,FF0000,16.66,(Frametime,0)
 Line18Cell1Text=\n<G=Frametime,0,-2,1,0,100,80>
 Line18Cell2Text=\n<SWITCH PresentMode><CASE 0><C=00FF00>HW: legacy flip<CASE 1><C=00FF00>HW: legacy copy<CASE 2><C=FF0000>Composed: flip<CASE 3><C=00FF00>HW: independent flip<CASE 4><C=00FF00>HW composed: iflip<C><CASE 5><C=FF0000>Composed: GPU copy<C><CASE 6><C=FF0000>Composed: CPU copy<C><CASE>
 [Layer0]
 Name=
 Text=<S=50>%Driver%<S>\n<TT=PC>
 PositionSticky=0
-ExtentX=0
-ExtentY=0
+ExtentX=-1
+ExtentY=-22
 ExtentOrigin=0
 FixedAlignment=1
 TextColor=FFFFFF
