@@ -7,16 +7,17 @@ The overlay uses joint data from RTSS and PresentMon built-in plugin that build 
 | Category | Data |
 | - | - |
 | GPU Driver | Edition/Version |
-| CPU Name | Usage(%), Clock(MHz), Temp°, Power(W) |
+| CPU | Usage(%), Clock(MHz), Temp(C°), Power(W) |
 | RAM (Total RAM) | Usage(GB) |
-| GPU Name | Usage(%), Clock(MHz), Temp°, Power(W) |
-| VRAM (Total VRAM) | Usage(GB), Clock(MHz), Temp° |
-| FPS (API) | Current, Average, 1% Low, 0.1% Low, Frametime(Graph) |
+| GPU | Usage(%), Clock(MHz), Temp(C°), Power(W) |
+| VRAM (Total VRAM) | Usage(GB), Clock(MHz), Temp(C°) |
+| FPS (API) | Current, Average, 1%, 0.1% |
+| Frametime | Graph |
 | Presentation Model | Hardware (Composed): Independent/Legacy flip; Composed: Copy |
 
-*Compact
+### Compact Preview
   <img src="https://raw.githubusercontent.com/zappthed/RTSS_Metrics_Overlay/refs/heads/main/Preview/RTSS_metrics_overlay_compact.png" style="max-height: 800px; width: auto;">
-*Detailed
+### Detailed Preview
   <img src="https://raw.githubusercontent.com/zappthed/RTSS_Metrics_Overlay/refs/heads/main/Preview/RTSS_metrics_overlay_detailed.png" style="max-height: 800px; width: auto;">
 
 ## Presentation Model
@@ -34,4 +35,3 @@ For a game using a Flip swap effect, there are various factors that determine wh
     - DirectFlip with multi-plane overlay (requires MPO): Your swapchain buffers are within some hardware-dependent scaling factor of your window dimensions. The DWM is able to reserve a dedicated hardware scanout plane for your application, which is then scanned out and potentially stretched to an alpha-blended sub-region of the screen.
 
   <img src="https://github.com/zappthed/RTSS_Metrics_Overlay/blob/main/Preview/presentation_model_d3d11-12_flip.png" style="max-height: 800px; width: auto;">
-  
