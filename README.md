@@ -17,6 +17,7 @@ The overlay uses joint data from RTSS and PresentMon built-in plugin that build 
 
 ### Compact Preview
   <img src="https://raw.githubusercontent.com/zappthed/RTSS_Metrics_Overlay/refs/heads/main/Preview/RTSS_metrics_overlay_compact.png" style="max-height: 800px; width: auto;">
+  
 ### Detailed Preview
   <img src="https://raw.githubusercontent.com/zappthed/RTSS_Metrics_Overlay/refs/heads/main/Preview/RTSS_metrics_overlay_detailed.png" style="max-height: 800px; width: auto;">
 
