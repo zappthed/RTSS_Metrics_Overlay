@@ -15,11 +15,10 @@ The overlay uses joint data from RTSS and PresentMon built-in plugin that build 
 | Frametime | Graph |
 | Presentation Model | Hardware (Composed): Independent/Legacy flip; Composed: Copy |
 
-### Compact Preview
-  <img src="https://raw.githubusercontent.com/zappthed/RTSS_Metrics_Overlay/refs/heads/main/Preview/RTSS_metrics_overlay_compact.png" style="max-height: 800px; width: auto;">
-  
-### Detailed Preview
-  <img src="https://raw.githubusercontent.com/zappthed/RTSS_Metrics_Overlay/refs/heads/main/Preview/RTSS_metrics_overlay_detailed.png" style="max-height: 800px; width: auto;">
+### Overlay Previews
+  <img src="https://raw.githubusercontent.com/zappthed/RTSS_metrics_overlay/refs/heads/main/Preview/RTSS_metrics_overlay_compact.png" style="max-height: 250px; width: auto;">
+  <img src="https://raw.githubusercontent.com/zappthed/RTSS_metrics_overlay/refs/heads/main/Preview/RTSS_metrics_overlay_detailed.png" style="max-height: 500px; width: auto;">
+  <img src="https://raw.githubusercontent.com/zappthed/RTSS_metrics_overlay/refs/heads/main/Preview/Zappthed_OVERLAY.png" style="max-height: 330px; width: auto;">
 
 ## Presentation Model
 
